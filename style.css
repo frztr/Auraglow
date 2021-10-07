@@ -219,6 +219,10 @@ a
     text-align: right;
     grid-column: 3;
 }
+.cart>a
+{
+    padding: 25px;
+}
 
 button
 {
