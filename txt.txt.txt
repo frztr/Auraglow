@@ -1,0 +1,70 @@
+using System;
+
+class Program {
+
+    
+    static void Main(string[] args) {
+        Console.WriteLine("Введите m");
+       int m = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите n");
+       int n = Convert.ToInt32(Console.ReadLine());
+      int[,] m1 = new int[m,n];
+      int[,] m2 = new int[m,n];
+      
+      Console.WriteLine("Введите первую матрицу");
+      int l = 0;
+      for(int i = 0;i<m;i++)
+      {
+        string[] s = Console.ReadLine().Split(" ");
+        l = 0;
+        foreach(string x in s)
+          {
+            m1[i,l] = Convert.ToInt32(x.ToString());
+            l++;
+          }  
+      }
+
+      Console.WriteLine("Введите первую матрицу");
+      l = 0;
+      for(int i = 0;i<m;i++)
+      {
+        string[] s = Console.ReadLine().Split(" ");
+        l = 0;
+        foreach(string x in s)
+          {
+            m2[i,l] = Convert.ToInt32(x.ToString());
+            l++;
+          }  
+      }
+
+      Console.WriteLine("Вывод");
+      for(int i = 0;i<m;i++)
+      {
+        for(int j = 0;j<n;j++)
+          {
+            Console.Write(m1[i,j]+m2[i,j]+" ");
+          }
+        Console.WriteLine();
+      }
+
+      Console.WriteLine("Вывод");
+      for(int i = 0;i<m;i++)
+      {
+        for(int j = 0;j<n;j++)
+          {
+            Console.Write(m1[i,j]-m2[i,j]+" ");
+          }
+        Console.WriteLine();
+      }
+
+      Console.WriteLine("Вывод");
+      for(int i = 0;i<m;i++)
+      {
+        for(int j = 0;j<n;j++)
+          {
+            Console.Write(m1[i,j]*m2[i,j]+" ");
+          }
+        Console.WriteLine();
+      }
+    }
+}
